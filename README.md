@@ -1,7 +1,7 @@
 WebAccessibilityToolbar
 =======================
 
-This repo contains all the files for the web accessibility toolbar including a an ISS file for creating an install package.
+This repo contains all the files for the web accessibility toolbar including a an ISS file for creating an install package (using [Inno installer] (http://www.jrsoftware.org/isinfo.php)).
 
 ##Editable files
 
