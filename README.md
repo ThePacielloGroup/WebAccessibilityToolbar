@@ -39,4 +39,4 @@ Icons can be added to menus/menu buttons/menu items
 
 The Structure menu button (from the XML file Accessibility_Toolbar.xml)
 
- &lt;button type="button" resid="Structure" accesskey="6" image="structure.bmp">
+> &lt;button type="button" resid="Structure" accesskey="6" image="structure.bmp">
