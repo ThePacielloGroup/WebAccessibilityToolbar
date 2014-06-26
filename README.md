@@ -30,4 +30,13 @@ You can modify an exsiting feature by changing its corresponding script file.
 
 **For example:**
 The WAT > Structure > headings
-is powered by Headings.js, so you hack on that script to chnage the behaviour of the feature.
+is powered by Headings.js, so you hack on that script to change the behaviour of the feature.
+
+###icons folder
+Icons can be added to menus/menu buttons/menu items
+
+**For example:**
+
+The Structure menu button (from the XML file Accessibility_Toolbar.xml)
+
+ &lt;button type="button" resid="Structure" accesskey="6" image="structure.bmp">
