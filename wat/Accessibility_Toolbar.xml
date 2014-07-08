@@ -23,6 +23,8 @@
 		<separator/>
 			<item resid="validatorNU" image="-1" />
 			<item resid="validatorNU_m" image="-1" window="new" />
+			<item resid="Validate_HTML_5" image="-1" />
+			<item resid="Validate_HTML_5_m" window="new" image="-1" />
 			<item resid="wcag_filter" image="-1" />
 				<separator/>
 			<subitem resid="W3C_HTML_Validator">	
@@ -120,6 +122,8 @@
 	<item resid="tab_order" image="-1" />
 	<separator/>
 	<item resid="other_struc" image="-1" />
+	<!-- <item resid="other_struc_1" image="-1" />
+	<item resid="other_aria" image="-1" />  -->
 	</menu>
 	</button>
 	<btnseparator/>
