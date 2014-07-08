@@ -1,8 +1,64 @@
 
 // Based on code originally Developed By Steve Faulkner 2003/2004
-
+// Headings.js
 
 function main(){
+
+// NEW SECTION, May 2014  to not count display='none' ************
+function check_parents(element) {    // if returns false, display='none' not found in entire parent grandparent, etc hierarchy
+var vis = false;   
+var par = element; 
+//alert("par is " + par + " and element is " + element);
+	while (par)
+	{	
+		if (par != '[object]')   // to break loop at no object to call/check
+		{
+		var dis = par.currentStyle.getPropertyValue('display');
+		//alert("dis returned is " + dis);
+		if (dis == 'none')
+			{
+			par = false;  // to break loop
+			vis = true;
+			}
+		else
+			{
+			par=par.parentNode;  // check up the next parent, until no more to check, but stop at Object Document, otherwise will fail above call
+			//alert("par is " + Object.prototype.toString(par));
+			if (par == '[object Document]')   // to break loop at last object to call/check
+				{
+				par=false;
+				vis = false;
+				}
+			}
+		}
+		else
+//			{
+//			par=false;
+//			vis = false;
+//			}
+		{
+			//if ((par) && (par.type == 1))  // type 1 = attribute
+			if (par.style)  // style undefined is root
+				{
+					//d.document.write("<p>type is " + par.nodeType +  " </p>\n\n");
+					if (par.style.getAttribute('display') == 'none')
+						{ 
+						par = false;  // to break loop
+						vis = true;
+						}
+					par = par.parentNode;  // get parent
+				}
+			else
+				{					
+				par=false;
+				vis = false;
+				}
+		}
+	}
+return vis;
+}
+// NEW SECTION, May 2014  to not count display='none' ************
+
 function FrameGuard() {
 
     //create object just to check length of the properties array
@@ -58,16 +114,41 @@ function heading(){
     var z=0,tag=new Array('h1','h2','h3','h4','h5','h6');
     var count=new Array(0,0,0,0,0,0);
     var msg='';
+// NEW SECTION, May 2014
+	var non_heading=0;
+	var non_text=0;
     if (FrameGuard()) {
-        for (n=0;n<tag.length;n++) {
+        for (n=0;n<tag.length;n++) 
+		{
             
             t=document.getElementsByTagName(tag[n]);
             count[n]=t.length;
+			//alert("count of " + tag[n] + " is " + count[n]);
+			//alert("t is " + t + " and t.length is " + t.length);		// t.length is how many headings found at each particular level
             //alert( t.length);
-            if (count[n]>0) {
+			
+// NEW SECTION, May 2014  to not count display='none' ************
+			for (i=0;i<t.length;i++)  
+			{
+				if (check_parents(t[i]))
+					{
+					//alert ('none found on element' +  t[i].innerHTML); // if we find display='none', then we don't want to count it, but don't remove from array as still works just fine below
+					non_heading++;   // keep track of how many are hidden/display='none'
+					if (count[n] != 0)
+						count[n]--;
+					//alert ('count is ' + count[n]);
+					}
+			}
+// NEW SECTION, May 2014  to not count display='none' ***********
+			z= z + count[n];			// count up total headings here, not later....	
+			//alert ("z is " + z); 
+
+            if (count[n]>0) 
+			{
                 msg=msg+'; '+count[n]+' h'+(n+1);
-                //alert( msg);
-                for (i=0;i<t.length;i++) {
+                // alert( msg);							// msg is built on the fly as each 'h' is found
+                for (i=0;i<t.length;i++) 				// still draws <h#> around each VISIBLE heading just fine
+				{
                     var h;
                     // alert( t[i].style);
                     h=t[i].innerHTML;
@@ -77,17 +158,27 @@ function heading(){
                     catch (e) {
                              //alert(e);
                     }
-                    if (h!='')
-                        z=z+1;
+                    //if (h!='')
+                    //    z=z+1;
+// NEW SECTION, May 2014
+					if (h == '')  // if emtpy text, count those headings separate
+						non_text++;
                 }
             }
         }
         //alert( 'boo');
-        if (z==0)
+        if (z==0)   // z = total number of headings found
             alert('No Heading Elements Used');
         else {
-            alert(z+' Headings'+msg);
-
+// NEW SECTION, May 2014
+			if ((non_heading == 0) && (non_text == 0))
+				alert(z+' Headings'+msg);	
+			else if ((non_heading !=0) && (non_text ==0))
+				alert(z+' Headings'+msg+ ", (display:none " + non_heading + " headings)");
+			else if ((non_heading ==0) && (non_text !=0))
+				alert(z+' Headings'+msg+ ", ( " + non_text + " headings without text)");
+			else
+				alert(z+' Headings'+msg+ ", (display:none " + non_heading + " headings, including " + non_text + " headings without text)");
         }
     }
 }
