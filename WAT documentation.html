@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<Title>Web Accessibility Toolbar documentation</title>
+</head>
+
+<body>
+<h1>Web Accessibility Toolbar documentation</h1>
+
+<p>The <a href="http://www.paciellogroup.com/resources/wat">Web Accessibility Toolbar (WAT)</a> is developed by <a href="http://www.paciellogroup.com/">The Paciello Group (TPG)</a>. It is a free plugin for Internet Explorer, that makes it easy to evaluate a website for accessibility.</p>
+
+<p>This documentation describes the menus within the WAT, and the tools and features they contain. Each menu can be accessed with a mouse, or with a keyboard shortcut. These shortcuts are included throughout, and summarised in the <a href="#keyboard">keyboard shortcuts</a> section for convenience.</p>
+
+<h2>Check menu</h2>
+
+<p>Keyboard shortcut: Control 1.</p>
+
+<p>The options under this menu enable you to check the code of the current web page.</p>
+
+<h3>W3C HTML validation quick check</h3>
+
+<p>The HTML validation quick check displays the number of errors detected in the HTML code of the web page. It is a high level indication of the code quality, and does not provide any details about the nature of the errors.</p>
+
+<h3>W3C Nu validation service</h3>
+
+<p>The W3C Nu validation service provides a detailed report on the HTML and ARIA code of the web page, including errors and warnings. There are options to open the report in the current window or a new window.</p>
+
+<h3>Filter Nu results</h3>
+
+<p>The Nu filter can be used on the results produced by the W3C Nu validation service. It filters the results so that only conformance issues relating to accessibility are displayed.</p>
+
+<h3>W3C HTML validation service</h3>
+
+<p>The W3C HTML validation service provides a detailed report on the HTML code of the web page, including errors and warnings. There are options to open the report in the current window or a new window.</p>
+
+<h3>W3C CSS validation service</h3>
+
+<p>The W3C CSS validation service provides a detailed report on the CSS code of the web page, including errors and warnings. There are options to open the report in the current window or a new window.</p>
+
+<h3>W3C Link checker</h3>
+
+<p>The W3C Link checker provides a report on the integrity and validity of links on the current page, including errors and warnings. There are options to open the report in the current window or in a new window, and an option to check the links on pages linked to the current one.</p>
+
+<h3>Functional Accessibility Checker</h3>
+
+<p>The Functional Accessibility Checker from the University of Illinois provides a report on the accessibility of the current page. Results are grouped into high level categories including navigation and orientation, text equivalence, scripting, styling and HTML standards.</p>
+
+<h3>The Wave</h3>
+
+<p>The Wave accessibility checker from WebAIM provides a report on the accessibility of the current page. The results are summarised for convenience, and also displayed in-line with the current page for easy identification.</p>
+
+<h3>Juicy Studio readability test</h3>
+
+<p>The Readability test from Juicy Studio measures the content of a web page against the Gunning-Fog Index, Flesch Reading Ease, and Flesch-Kincaid grade level. It provides a report that indicates the average reading age or education level required to read and understand the content of the page.</p>
+<h2>CSS menu</h2>
+
+<p>Keyboard shortcut: Control 3.</p>
+
+<p>The options under this menu can be used to manipulate the CSS used to style the current web page.</p>
+
+<h3>Disable CSS</h3>
+
+<p>This removes all the CSS styling from the current page. It reveals the underlying HTML structure and the order in which content is presented to Assistive Technologies (AT).</p>
+
+<h3>Disable in-line styles</h3>
+
+<p>This removes all the styling where the CSS has been included in-line with the HTML of the current page.</p>
+
+<h3>Display none to inline</h3>
+
+<p>This reveals content that has been hidden with the CSS display: property set to "none". The content is changed to be displayed "inline" instead.</p>
+
+<h3>Visibility hidden to visible</h3>
+
+<p>This reveals content that has been hidden with the CSS visibility:; property set to "hidden". The content is changed to be "visible" instead.</p>
+
+<h3>Top/left text indent 0</h3>
+
+<p>This removes the CSS properties commonly used to hide content off-screen, bringing the content into the browser's viewport.</p>
+
+<h2>Images menu</h2>
+
+<p>Keyboard shortcut: Control 4.</p>
+
+<p>The options under this menu can be used to manipulate the images and graphical content of the current page.</p>
+
+<h3>List images</h3>
+
+<p>This opens a new window with a list of images on the page. The filename and dimensions for each image are displayed, plus the number of instances of each image and the HTML used to display each one</p>
+
+<h3>Remove images</h3>
+
+<p>This removes all foreground images from the page. The alternative text for each image can then be seen.</p>
+
+<h3>Remove CSS images</h3>
+
+<p>This removes all background images from the page. It is then possible to identify content which becomes meaningless when background images are not available.</p>
+
+<h3>Show images</h3>
+
+<p>Shows the images' alt attribute, if the img does not have an alt attribute the text 'No alt!' is displayed and puts a border around each image.</p>
+
+<h3>Show image maps</h3>
+
+<p>Checks for the presence of client-side and server-side image maps. if none are found it is indicated by an alert message. If image maps are found, they are displayed in a new window along withthe associated area elements</p>
+
+<h3>Active images</h3>
+
+<p>Counts alt-text errors and highlights alt text on active images to review. Active images include images inside anchor           tags (image links), &lt;input&gt; elements with type=image and &lt;area&gt; elements for image maps. This favelet adds "NoALT" markup text for image errors with all image borders highlighted.</p>
+
+<h3>Larger images</h3>
+
+<p>Counts alt-text errors and highlights alt-text on larger images to review. Larger images are &lt;img&gt; elements which are not active and whose height and width are <em>both </em>greater than 9 pixels.</p>
+<h2>Colour button</h2>
+
+<p>Keyboard shortcut: Control 5.</p>
+<h3>Contrast analyzer application</h3>
+
+<p>The Contrast analyzer checks the contrast of foreground/background colour combinations against WCAG 2.0 SC1.4.3. Enter the hex codes for the foreground/background colours to determine their contrast ratio.</p>
+<h2>Structure menu</h2>
+
+<p>Keyboard shortcut: Control 6.</p>
+
+<p>The options under this menu can be used to evaluate different aspects of the HTML structure of the current page.</p>
+
+<h3>Headings</h3>
+
+<p>This indicates all the headings marked up using the &lt;h1&gt; through &lt;h6&gt; elements. The heading and heading level information is displayed inline within the page.</p>
+
+<h3>Heading structure</h3>
+
+<p>This opens a new browser window displaying the heading structure of the current page. The document outline is represented visually, with the different heading elements used to give content structure.</p>
+
+<h3>Heading count</h3>
+
+<p>This displays an alert indicating the number of headings on the page, and a breakdown by heading level.</p>
+
+<h3>List items</h3>
+
+<p>This displays the list markup inline within the page, making it possible to identify lists that have been marked up appropriately.</p>
+
+<h3>Fieldset/labels</h3>
+
+<p>This displays fieldset and form label markup inline within the page. Instances where the &lt;fieldset&gt; element does not have a corresponding &lt;legend&gt; element are flagged, as are instances where the &lt;label&gt; element is not properly associated with its corresponding form field.</p>
+
+<h3>Abbreviations and acronyms</h3>
+
+<p>This displays the expanded content of &lt;abbr&gt; and &lt;acronym&gt; elements inline within the page.</p>
+
+<h3>Q/blockquote</h3>
+
+<p>This displays &lt;q&gt; and &lt;blockquote&gt; markup inline within the page.</p>
+
+<h3>Paragraphs</h3>
+
+<p>This displays instances of the &lt;p&gt; element inline within the page.</p>
+
+<h3>This displays HTML5 sectioning element markup inline within the page, for example the &lt;header&gt;, &lt;footer&gt; and &lt;article&gt; elements.</p>
+
+<h3>ARIA landmark roles</h3>
+
+<p>This displays ARIA landmark roles inline within the page, including the banner, main, navigation, complimentary, contentinfo and article roles.</p>
+
+<h3>Access keys</h3>
+
+<p>This indicates whether access keys are present and displays the keys that have been assigned.</p>
+
+<h3>Tab order indicator</h3>
+
+<p>This displays the tab order inline within the page. Each focusable element within the page is assigned a number, making it easy to track the sequence of focusable elements across the page.</p>
+
+<h3>Show other elements</h3>
+
+<p>Enter an element, then select a colour. All instances of the chosen element will be highlighted on the page in the chosen colour.</p>
+
+<h2>Tables menu</h2>
+
+<p>Keyboard shortcut: Control 7.</p>
+
+<p>The options under this menu can be used to examine HTML tables on the current page.</p>
+
+<h3>Juicy Studio table inspector</h3>
+
+<p>The Juicy Studio table inspector examines tables present on the page and displays inline information about their markup and construction.</p>
+
+<h3>Table headers</h3>
+
+<p>This indicates the presence of table headers and displays inline information for each &lt;th&gt; element found.</p>
+
+<h3>Table borders</h3>
+
+<p>Adds a CSS border style to all table elements on the page.</p>
+
+<h3>Table cell order</h3>
+
+<p>This displays a number inline within each table cell, making it easy to understand the order of content within a table.</p>
+
+<h3>Data tables</h3>
+
+<p>This counts the number of data tables present on the page and presents the result in an alert dialogue.</p>
+
+<h3>Linearize</h3>
+
+<p>This removes the table markup from the page, and displays table content in a linear format (as it would appear to someone using a screen reader).</p>
+
+<h2>Frames menu</h2>
+
+<p>Keyboard shortcut: Control 8.</p>
+
+<p>The options under this menu can be used to check frames used within the current page.</p>
+
+<h3>Navigate to frames</h3>
+
+<p>This presents a sub-menu with links to each of the documents included within frames in the current page. Each document can be opened directly in the browser.</p>
+
+<h3>Frame borders</h3>
+
+<p>Shows borders of all frame elements on the current page.</p>
+
+<h3>Frame name/title</h3>
+
+<p>Displays (in a new window) a list of framed pages along with their frame elements name and title attribute content.</p>
+
+<h2>Document info menu</h2>
+
+<p>Keyboard shortcut: Control Alt c.</p>
+
+<p>The options under this menu can be used to inspect information about the current page.</p>
+
+<h3>Page information</h3>
+
+<p>This opens a new browser window with information about the current page, including its title, charset, domain, and basic content types.</p>
+
+<h3>Metadata information</h3>
+
+<p>This opens a new browser window with information about the &lt;meta&gt; and &lt;link&gt; elements within the &lt;head&gt; of the current page.</p>
+
+<h3>Show lang attributes</h3>
+
+<p>This displays the lang attribute used on the &lt;html&gt; element, and elsewhere within the current page.</p>
+
+<h3>Show titles</h3>
+
+<p>This indicates the presence of the title attribute and displays the title content inline within the page.</p>
+
+<h3>Skip links</h3>
+
+<p>This displays an alert indicating the number of skip links present on the current page.</p>
+
+<h3>List links</h3>
+
+<p>This opens a new browser window with information about the links present on the current page, including URL, link text and browser window target.</p>
+
+<h3>JavaScript/new window links</h3>
+
+<p>This displays an alert containing information about the number and type of links that use JavaScript to open in a new window.</p>
+
+<h3>List downloadable files</h3>
+
+<p>This opens a new browser window and displays information about links leading to downloadable files on the current page.</p>
+
+<h3>View partial source</h3>
+
+<p>Displays the <acronym title="document object model">DOM</acronym> tree of the selected content as HTML. Select aome page content then activate the function. A new window will open showing the selected content and generated code.</p>
+
+<h3>DOM viewer</h3>
+
+<p>This opens a browser based viewer for inspecting the DOM of the current page.</p>
+
+<h2>IE menu</h2>
+
+<p>Keyboard shortcut: Control Alt s.</p>
+
+<p>The options under this menu provide quick access to specific IE settings, including:</p>
+
+<ul>
+<li>Toggle images on/off.</li>
+<li>Toggle JavaScript on/off.</li>
+<li>Toggle ActiveX on/off.</li>
+<li>Toggle CSS on/off.</li>
+<li>Text resize (Largest, Large, Medium, Small, Smallest).</li>
+<p>Open IE options dialog.</li>
+<li>Open IE accessibility options dialog.</li>
+<li>Windows accessibility options center.</li>
+</ul>
+
+<h2>Dev button</h2>
+
+<p>Keyboard shortcut: Control Alt l.</p>
+
+<p>Opens the built in IE developer tool. Can also be accessed using the IE shortcut F12.</p>
+
+<h2>References menu</h2>
+<h3>Standards and specifications</h3>
+
+<p>This includes links to the HTML, CSS and ARIA specifications, and to guidelines including WCAG 2.0 and Section 508.</p>
+
+<h3>Resources</h3>
+
+<p>This includes links to resources including HTML5 Accessibility Support, WebAIM and Jim Thatcher.</p>
+
+<h3>Blogs</h3>
+
+<p>This includes links to accessibility blogs including the TPG blog and Juicy Studio.</p>
+
+<h2>aViewer button</h2>
+
+<p>Keyboard shortcut: Control Alt a.</p>
+
+<p>Opens the aViewer accessibility inspector. You can examine the accessibility information exposed by  accessibility APIs in IE, Firefox or Chrome.</p>
+
+<h2>Help menu</h2>
+
+<p>Keyboard shortcut: Control Alt 0.</p>
+
+<p>The options under this menu provide access to helpful information, and settings for the WAT:</p>
+
+<ul>
+<li>The Paciello Group website</li>
+<li>Accessibility toolbar options (enable hotkeys, toggle hotkeys display, toggle icon display).</li>
+<li>Accessibility toolbar documentation.</li>
+<li>About accessibility toolbar.</li>
+<li>Installed version.</li>
+</ul>
+
+<h2 id="keyboard">Keyboard shortcuts</h2>
+
+<p>The following is a complete list of WAT keyboard shortcuts:</p>
+
+<ul>
+<li>Check menu - Control 1.</li>
+<li>Resize menu - Control 2.</li>
+<li>CSS menu - Control 3.</li>
+<li>Images menu - Control 4.</li>
+<li>Colour menu - Control 5.</li>
+<li>Structure menu - Control 6.</li>
+<li>Tables menu - Control 7.</li>
+<li>Frames menu - Control 8.</li>
+<li>Document info - Control Alt c.</li>
+<li>IE menu - Control Alt s.</li>
+<li>References menu - Control Alt l.</li>
+<li>aViewer menu - Control Alt a.</li>
+<li>Help menu - Control Alt 0.</li>
+</ul>
+
+
+</body>
+</html>
