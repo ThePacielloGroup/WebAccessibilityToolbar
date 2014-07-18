@@ -10,7 +10,7 @@ for accessibility.
 This documentation describes the menus within the WAT, and the tools and
 features they contain. Each menu can be accessed with a mouse, or with a
 keyboard shortcut. These shortcuts are included throughout, and
-summarised in the [keyboard shortcuts](#keyboard) section for
+summarised in the [keyboard shortcuts](#keyboard-shortcuts) section for
 convenience.
 
 Check menu
@@ -439,7 +439,7 @@ settings for the WAT:
 -   About accessibility toolbar.
 -   Installed version.
 
-Keyboard shortcuts {#keyboard}
+Keyboard shortcuts
 ------------------
 
 The following is a complete list of WAT keyboard shortcuts:
@@ -457,4 +457,3 @@ The following is a complete list of WAT keyboard shortcuts:
 -   References menu - Control Alt l.
 -   aViewer menu - Control Alt a.
 -   Help menu - Control Alt 0.
-

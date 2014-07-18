@@ -3,7 +3,7 @@ Web Accessibility Toolbar
 
 This repo contains the [Web Accessibility Toolbar (WAT)](http://www.paciellogroup.com/resources/wat) including an [Inno Setup](http://www.jrsoftware.org/isinfo.php) file for creating a "setup.exe"-style installer.
 
-There's [reference documentation](https://github.com/ThePacielloGroup/WebAccessibilityToolbar/blob/master/documentation.md) that explains what you can do with the toolbar and includes keyboard shortcuts.
+There's [reference documentation](documentation.md) that explains what you can do with the toolbar and includes keyboard shortcuts.
 
 Currently this repo does not contain the source for the toolbar DLL, but this is only the "shell" for the code; you can change virtually anything by editing the scripts and then building the setup program with Inno Setup.
 
