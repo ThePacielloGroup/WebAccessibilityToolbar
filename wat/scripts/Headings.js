@@ -13,6 +13,7 @@ var par = element;
 	{	
 		if (par != '[object]')   // to break loop at no object to call/check
 		{
+		//alert('par is ' + par);
 		var dis = par.currentStyle.getPropertyValue('display');
 		//alert("dis returned is " + dis);
 		if (dis == 'none')
@@ -24,7 +25,7 @@ var par = element;
 			{
 			par=par.parentNode;  // check up the next parent, until no more to check, but stop at Object Document, otherwise will fail above call
 			//alert("par is " + Object.prototype.toString(par));
-			if (par == '[object Document]')   // to break loop at last object to call/check
+			if ((par == '[object Document]') || (par == '[object HTMLDocument]'))   // to break loop at last object to call/check
 				{
 				par=false;
 				vis = false;

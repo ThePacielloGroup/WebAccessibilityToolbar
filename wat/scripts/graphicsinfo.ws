@@ -226,7 +226,7 @@ function main()
 					var cssLink = WAT.document.createElement('STYLE');
 					cssLink.setAttribute('id', 'poot');
 					WAT.document.getElementsByTagName('head')[0].appendChild(cssLink);
-					WAT.document.all.poot.styleSheet.cssText=localize('style8');
+					WAT.document.all.poot.styleSheet.cssText=localize('style8'); 
 					return;
 					}
 				else
@@ -245,9 +245,13 @@ function main()
 				if (fr == 0)
 					{
 					var cssLink = doc.document.createElement('STYLE');
-					cssLink.setAttribute('id', 'poot');
-					doc.document.getElementsByTagName('head')[0].appendChild(cssLink);
-					doc.document.all.poot.styleSheet.cssText=localize('style8');
+					cssLink.setAttribute('id', 'poot');					
+					if (cssLink.styleSheet)
+						cssLink.styleSheet.cssText=localize('style8');
+					else
+						cssLink.appendChild(doc.document.createTextNode(localize('style8')));
+					
+					doc.document.getElementsByTagName('head')[0].appendChild(cssLink);   //fix for IE 11 July 2014 (need to fix above WAT also)
 					}
 				if (fr == f_length)		// don't close until we've done all frames, if they exist
 					doc.document.close();
