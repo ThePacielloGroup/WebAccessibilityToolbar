@@ -52,26 +52,16 @@
 			<separator/>
 		<item resid="FAE" image="-1" />
 		<separator/>
-		<subitem resid="Wave_tools" image="-1">
-	<item resid="wave_tool" image="-1" />
-	</subitem>
+			<item resid="wave_tool" image="-1" />
 	<separator/>
 	<item resid="jsread_tool" image="-1" />
 	<item resid="lynx_tool" image="-1" />
+	<separator/>
+	<item resid="tenon_tool" image="-1" />
 	</menu>
 	</button>
 	<btnseparator/>
-	<button type="button" resid="Resize" accesskey="2" image="resize.bmp">
-		<menu resid="Resolution">
-			<item resid="640X480" image="-1"/>
-			<item resid="800X600" image="-1"/>
-			<item resid="1024X768" image="-1"/>
-			<item resid="1280X1024" image="-1"/>
-<item resid="Custom_height_width" image="-1"/>
-		</menu>
-	</button>
-	<btnseparator/>
-	<button type="button" resid="CSS" accesskey="3" image="css.bmp">
+	<button type="button" resid="CSS" accesskey="2" image="css.bmp">
 		<menu resid="Styles">
 			<item resid="Disable_CSS" image="-1"/>
 			<item resid="Disable_CSS_inline" image="-1"/>
@@ -82,7 +72,7 @@
 		</menu>
 	</button>
 	<btnseparator/>
-	<button type="button" resid="Images" accesskey="4" image="image.bmp">
+	<button type="button" resid="Images" accesskey="3" image="image.bmp">
 	<menu resid="Images">
 	<item resid="list_img" image="-1" />
 	<item resid="toggle_img" image="-1" />
@@ -91,20 +81,16 @@
 	<item resid="map_img" image="-1" />
 	<separator/>
 	<item resid="ActiveImage" image="-1"  />
- <item resid="LargerImage" images="-1" /> 
-  <item resid="SmallImage" image="-1" /> 
-  <item resid="LongDescription" image="-1" />
+	<item resid="LargerImage" images="-1" /> 
 	</menu></button>
 	<btnseparator/>
-	<button type="button" resid="Colour" accesskey="5" image="colour.bmp">
+	<button type="button" resid="Colour" accesskey="4" image="colour.bmp">
 	<menu resid="Colour">
-	<item resid="greyscale_col" image="-1" />
 	<item resid="cca_col" image="-1" />
-	<item resid="js_col1" image="-1" />
 	</menu>
 	</button>
 	<btnseparator/>
-	<button type="button" resid="Structure" accesskey="6" image="structure.bmp">
+	<button type="button" resid="Structure" accesskey="5" image="structure.bmp">
 	<menu resid="Structure">
 	<item resid="head1_struc" image="-1" />
 	<item resid="head2_struc" image="-1" />
@@ -127,7 +113,7 @@
 	</menu>
 	</button>
 	<btnseparator/>
-	<button type="button" resid="tables" accesskey="7" image="table.bmp"><menu resid="tables">
+	<button type="button" resid="tables" accesskey="6" image="table.bmp"><menu resid="tables">
 	<item resid="used_col" image="-1" />
 	<item resid="th_struc" image="-1" />
 	<item resid="complex_struc" image="-1" />
@@ -137,7 +123,7 @@
 	<item resid="linear_struc" image="-1" />
 	</menu></button>
 	<btnseparator/>
-	<button type="button" resid="framemenu" accesskey="8" image="frame.bmp">
+	<button type="button" resid="framemenu" accesskey="7" image="frame.bmp">
 	<menu resid="framemenu">
 	<item resid="indivframes" />
 	<separator/>
@@ -194,7 +180,7 @@
 	<button type="command" resid="msaav" image="tools.bmp" accesskey="a">
 	<menu resid="msaav" /></button>
 	<btnseparator/>
-	<button type="button" resid="refs" Accesskey="l" image="logger.bmp">
+	<button type="button" resid="refs" Accesskey="8" image="logger.bmp">
 	<menu resid="refs">
 			<subitem resid="guid">
 			<item resid="html5" image="-1"/>
