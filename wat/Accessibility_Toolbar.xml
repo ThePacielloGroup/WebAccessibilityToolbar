@@ -84,11 +84,8 @@
 	<item resid="LargerImage" images="-1" /> 
 	</menu></button>
 	<btnseparator/>
-	<button type="button" resid="Colour" accesskey="4" image="colour.bmp">
-	<menu resid="Colour">
-	<item resid="cca_col" image="-1" />
-	</menu>
-	</button>
+	<button type="command" resid="cca_col" accesskey="4" image="colour.bmp">
+	<menu resid="cca_col" /></button>
 	<btnseparator/>
 	<button type="button" resid="Structure" accesskey="5" image="structure.bmp">
 	<menu resid="Structure">
