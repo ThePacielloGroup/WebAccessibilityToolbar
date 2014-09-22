@@ -55,7 +55,7 @@
 			<item resid="wave_tool" image="-1" />
 	<separator/>
 	<item resid="jsread_tool" image="-1" />
-	<item resid="lynx_tool" image="-1" />
+	<!-- <item resid="lynx_tool" image="-1" /> -->
 	<separator/>
 	<item resid="tenon_tool" image="-1" />
 	</menu>
