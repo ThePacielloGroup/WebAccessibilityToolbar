@@ -88,7 +88,7 @@ return vis;
 					//alert("found hidden " + t[i]);
 					var h=t[i].innerHTML;
 					doctitle+='<div style="margin-left:'+(t[i].tagName.slice(1,2)*4)+'0px;font:medium verdana\"><span style=\"color: #000080;\"><'+t[i].tagName+' style="\font:medium verdana\">&lt;'+ '<span style=\"background-color: red;\">'+ t[i].tagName+'</span> &gt;</span>'
-					doctitle+='<span style=\"background-color: red;\">'+h+'</span>';
+					doctitle+='<span style=\"background-color: red; text-decoration: line-through;\">'+h+'</span>';
 					doctitle+='<span style=\"color:#000080;\">&lt;/'+ '<span style=\"background-color: red;\">' + t[i].tagName+'</span>&gt;</span></'+ t[i].tagName+ '></div></body></html>';
 				}
 // NEW SECTION, May 2014  to not count display='none' ************				
