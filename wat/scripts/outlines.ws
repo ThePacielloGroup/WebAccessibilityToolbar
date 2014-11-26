@@ -149,8 +149,10 @@ return vis;
 						}
 					else
 						{
-						alert(localize('errortxt1'));
-						WAT.document.write(la1+la2a+la3+doctitle);
+						// errortxt1 is => It appears that you are using a popup blocker, you will need to allow popups on this page to use this function
+						// if that is the case, there is no window, so don't attempt to write to it....
+						alert(localize('errortxt1')); 
+						//WAT.document.write(la1+la2a+la3+doctitle);
 						return;
 						}
 					}

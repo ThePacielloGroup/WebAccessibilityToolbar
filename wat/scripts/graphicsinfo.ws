@@ -231,12 +231,14 @@ function main()
 					}
 				else
 					{
+					// errortxt1 is => It appears that you are using a popup blocker, you will need to allow popups on this page to use this function
+					// if that is the case, there is no window, so don't attempt to write to it....
 					alert(localize('errortxt1'));
-					WAT.document.write(out1+out2a+out3);
-					var cssLink = WAT.document.createElement('STYLE');
-					cssLink.setAttribute('id', 'poot');
-					WAT.document.getElementsByTagName('head')[0].appendChild(cssLink);
-					WAT.document.all.poot.styleSheet.cssText=localize('style8');
+					//WAT.document.write(out1+out2a+out3);
+					//var cssLink = WAT.document.createElement('STYLE');
+					//cssLink.setAttribute('id', 'poot');
+					//WAT.document.getElementsByTagName('head')[0].appendChild(cssLink);
+					//WAT.document.all.poot.styleSheet.cssText=localize('style8');
 					return;
 					}
 				}
