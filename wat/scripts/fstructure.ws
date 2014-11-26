@@ -77,16 +77,17 @@ function replace_brackets(str)
 						{
 							stuff+='<li>Name <strong style=\"color:ff0000\">'+localize('frame4')+'</strong></li>'
 						}
+						// commented out 'longdesc', Nov 2014, per issue #29
 						//if ((tagf[ippo].tagName=='IFRAME'||tagf[ippo].tagName=='FRAME')&&tagf[ippo].attributes.longDesc.specified==true)
-						if ((tagf[ippo].tagName=='IFRAME'||tagf[ippo].tagName=='FRAME')&&tagf[ippo].longDesc !="")
-						{
-							stuff+='<li>Longdesc="<a href=\"'+tagf[ippo].longDesc+'\">'+tagf[ippo].longDesc+'"</a></li>'
-						}
-						else 
-						{
+						//if ((tagf[ippo].tagName=='IFRAME'||tagf[ippo].tagName=='FRAME')&&tagf[ippo].longDesc !="")
+						//{
+						//	stuff+='<li>Longdesc="<a href=\"'+tagf[ippo].longDesc+'\">'+tagf[ippo].longDesc+'"</a></li>'
+						//}
+						//else 
+						//{
 							//alert("style is " + tagf[ippo].style);
-							stuff+='<li>Longdesc <strong style=\"color:#ff0000\">'+localize('frame4')+'</strong></li>'
-						}
+						//	stuff+='<li>Longdesc <strong style=\"color:#ff0000\">'+localize('frame4')+'</strong></li>'
+						//}
 						//if (tagf[ippo].attributes.title.specified==true)
 						if (tagf[ippo].title != "")
 						{

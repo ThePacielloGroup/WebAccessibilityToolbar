@@ -88,7 +88,7 @@ return vis;
 					//alert("found hidden " + t[i]);
 					var h=t[i].innerHTML;
 					doctitle+='<div style="margin-left:'+(t[i].tagName.slice(1,2)*4)+'0px;font:medium verdana\"><span style=\"color: #000080;\"><'+t[i].tagName+' style="\font:medium verdana\">&lt;'+ '<span style=\"background-color: red;\">'+ t[i].tagName+'</span> &gt;</span>'
-					doctitle+='<span style=\"background-color: red;\">'+h+'</span>';
+					doctitle+='<span style=\"background-color: red; text-decoration: line-through;\">'+h+'</span>';
 					doctitle+='<span style=\"color:#000080;\">&lt;/'+ '<span style=\"background-color: red;\">' + t[i].tagName+'</span>&gt;</span></'+ t[i].tagName+ '></div></body></html>';
 				}
 // NEW SECTION, May 2014  to not count display='none' ************				
@@ -149,8 +149,10 @@ return vis;
 						}
 					else
 						{
-						alert(localize('errortxt1'));
-						WAT.document.write(la1+la2a+la3+doctitle);
+						// errortxt1 is => It appears that you are using a popup blocker, you will need to allow popups on this page to use this function
+						// if that is the case, there is no window, so don't attempt to write to it....
+						alert(localize('errortxt1')); 
+						//WAT.document.write(la1+la2a+la3+doctitle);
 						return;
 						}
 					}
