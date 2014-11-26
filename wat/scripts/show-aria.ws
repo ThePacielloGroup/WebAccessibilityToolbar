@@ -42,9 +42,9 @@ function main()
 	{
 		var str ="";		// rebuild each time thru the loop for each element on the page
 		i_aria = 0;
-		if (elems.item(i) != '[object]')
-		{
-			for (n=0; n<aria_tag.length;n++)
+		////if (elems.item(i) != '[object]')
+		////{
+			for (n=0; n<aria_tag.length;n++) 
 			{
 // for some reason, tagNames must be in all CAPS ?
 				//if (elems.item(i).hasAttribute(aria_tag[n]))    // aspx doesn't seem to support this call ????
@@ -64,7 +64,7 @@ function main()
 				else
 					dlProgress.document.writeln ("<li> " + elems.item(i).tagName + " -> " + str + " \n" + elems.item(i).outerHTML + " </li>\n\n\n");	
 			}
-		}			
+		////}			
 	}
 if (!aria)
     dlProgress.document.writeln ("<p> No elements with ARIA attributes were found on this web page. </p> <BR>");
