@@ -12,6 +12,12 @@ function main()
 
 	//var dlProgress = window.open ("about:blank", "dlProgress", str);
 	var dlProgress = window.open ("about:blank", "", str);
+	
+	if (!dlProgress)
+	{
+		alert("It appears that you are using a popup blocker, you will need to allow popups on this page to use this function");
+		return;
+	}
 
 	dlProgress.document.writeln("<!doctype html>");
 	dlProgress.document.writeln ("<html lang='en-US'>");
