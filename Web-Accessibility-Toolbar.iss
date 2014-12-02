@@ -1,9 +1,10 @@
-; How will the installer behave?
+; Choose the type of installer: 32-bit (only) or 32- and 64-bit
 ; Ensure only one of the following is enabled at a time.
-; If you are on a 64-bit system and wish to build a 32-only setup and a 32-and-64 setup, you need to run this twice.
-; If you are on a 32-bit system, you can only build a 32-bit setup file (but it doesn't matter which of the following two variables are active).
+;  * A 32-bit (only) build contains only 32-bit binaries
+;  * A 32-and-64-bit build contains 32-bit and 64-bit binaries (so you can run WAT in IE in both 32- and 64-bit modes)
+; Note: you can build both types of installer regardless of your Windows architecture.
 ;#define Build32BitOnly
-#define Build32and64Bit
+#define Build32And64Bit
 
 ; Vital Stats
 #define TPG "The Paciello Group"
@@ -19,7 +20,7 @@
   #define OutputArchName "32"
   #define InstallArch ""
 #endif
-#ifdef Build32and64Bit
+#ifdef Build32And64Bit
   #define OutputArchName "32+64"
   #define InstallArch "x64"
 #endif
@@ -62,7 +63,7 @@ Source: "Accessibility_Toolbar.dll"; DestDir: "{pf32}\{#DestinationDirectory}"; 
 Source: "scripts/*.*"; DestDir: "{pf32}\{#DestinationDirectory}\scripts"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec;
 Source: "aViewer/*.*"; DestDir: "{pf32}\{#DestinationDirectory}\aViewer"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec;
 Source: "CCA/*.*"; DestDir: "{pf32}\{#DestinationDirectory}\CCA"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec;
-
+#ifdef Build32And64Bit
 Source: "icons/*.bmp"; DestDir: "{pf64}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
 Source: "Accessibility_Toolbar.xml"; DestDir: "{pf64}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
 Source: "translation.ini"; DestDir: "{pf64}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
@@ -71,6 +72,7 @@ Source: "./x64/Accessibility_Toolbar.dll"; DestDir: "{pf64}\{#DestinationDirecto
 Source: "scripts/*.*"; DestDir: "{pf64}\{#DestinationDirectory}\scripts"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
 Source: "aViewer/*.*"; DestDir: "{pf64}\{#DestinationDirectory}\aViewer"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
 Source: "CCA/*.*"; DestDir: "{pf64}\{#DestinationDirectory}\CCA"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
+#endif
 
 [Languages]
 Name: "en"; MessagesFile: "compiler:Default.isl"
@@ -78,13 +80,16 @@ Name: "en"; MessagesFile: "compiler:Default.isl"
 [UninstallDelete]
 Type: files; Name: "{pf32}\{#DestinationDirectory}\*.*";
 Type: filesandordirs; Name: "{pf32}\{#DestinationDirectory}";
-
+#ifdef Build32And64Bit
 Type: files; Name: "{pf64}\{#DestinationDirectory}\*.*"; Check: Is64BitInstallMode
 Type: filesandordirs; Name: "{pf64}\{#DestinationDirectory}"; Check: Is64BitInstallMode
+#endif
 
 [Dirs]
 Name: "{pf32}\{#DestinationDirectory}"; Permissions: users-readexec;
+#ifdef Build32And64Bit
 Name: "{pf64}\{#DestinationDirectory}"; Permissions: users-readexec; Check: Is64BitInstallMode
+#endif
 
 [Code]
 procedure CurPageChanged(CurPage: Integer);
