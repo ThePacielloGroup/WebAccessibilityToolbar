@@ -2,9 +2,10 @@
 ; Ensure only one of the following is enabled at a time.
 ;  * A 32-bit (only) build contains only 32-bit binaries
 ;  * A 32-and-64-bit build contains 32-bit and 64-bit binaries (so you can run WAT in IE in both 32- and 64-bit modes)
-; Note: you can build both types of installer regardless of your Windows architecture.
+; You can build both types of installer regardless of your Windows architecture.
 ;#define Build32BitOnly
 #define Build32And64Bit
+; Please *do not* save changes if you only edit the above two lines :-).
 
 ; Vital Stats
 #define TPG "The Paciello Group"
