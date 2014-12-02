@@ -12,6 +12,7 @@
 #define FirstYear 2004
 #define ReleaseYear 2014
 #define TheVersion "2.0.0.0"
+#define DestinationDirectory "Web-Accessibility-Toolbar"
 
 ; Output filename arch part
 #ifdef Build32BitOnly
@@ -22,9 +23,6 @@
   #define OutputArchName "32+64"
   #define InstallArch "x64"
 #endif
-
-; Destination Directory
-#define DestinationDirectory "Web-Accessibility-Toolbar"
 
 [Setup]
 uninstalllogmode=overwrite
