@@ -24,7 +24,7 @@
 #endif
 
 ; Destination Directory
-#define DestinationDirectory "Accessibility_Toolbar"
+#define DestinationDirectory "Web-Accessibility-Toolbar"
 
 [Setup]
 uninstalllogmode=overwrite
