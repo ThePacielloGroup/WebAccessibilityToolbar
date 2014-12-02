@@ -74,7 +74,6 @@ Source: "scripts/*.*"; DestDir: "{pf64}\{#DestinationDirectory}\scripts"; Flags:
 Source: "aViewer/*.*"; DestDir: "{pf64}\{#DestinationDirectory}\aViewer"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
 Source: "CCA/*.*"; DestDir: "{pf64}\{#DestinationDirectory}\CCA"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
 
-
 [Languages]
 Name: "en"; MessagesFile: "compiler:Default.isl"
 
