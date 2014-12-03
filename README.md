@@ -12,7 +12,7 @@ Editable Files
 
 These are the files that you can edit to modify the WAT.
 
-### `Accessibility_Toolbar.xml`
+### Accessibility_Toolbar.xml
 
 This is an xml file which creates the menu's and menu items in the WAT UI.  You can add/remove/modify the UI via this file.  The text labels for the UI controls are provided via variable (res_id) references to the Translation.ini
 
@@ -23,7 +23,7 @@ The WAT > Structure > headings feature is represented as this in the XML file:
 <item resid="head1_struc" image="-1" />
 ```
 
-### `Translation.ini`
+### Translation.ini
 
 Contains all the text strings provided in the UI and the functions.  Also includes mappings to invoke the scripts and inbuilt features via the UI.
 
@@ -49,4 +49,4 @@ The Structure menu button (from the XML file Accessibility_Toolbar.xml)
 Building
 ---------
 
-Open `Accessibility_Toolbar_x86.iss` with [Inno Setup](http://www.jrsoftware.org/isinfo.php) -- we recommend using the [QuickStart Pack](http://www.jrsoftware.org/isdl.php#qsp) as this contains many useful add-ons.
+Open `Web-Accessibility-Toolbar.iss` with [Inno Setup](http://www.jrsoftware.org/isinfo.php).  You can build a setup file for 32-bit machines, or one for 64-bit machines (which also includes the 32-bit binaries, so you can use IE in 32- or 64-bit mode).  The comments in the ISS file explain how (you only need to change one line of the file).
