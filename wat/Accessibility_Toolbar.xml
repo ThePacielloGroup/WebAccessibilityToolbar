@@ -107,6 +107,7 @@
 	<item resid="other_struc" image="-1" />
 	<!-- <item resid="other_struc_1" image="-1" /> -->
 	<item resid="other_aria" image="-1" /> 
+	<item resid="show_focus" image="-1" />
 	</menu>
 	</button>
 	<btnseparator/>
