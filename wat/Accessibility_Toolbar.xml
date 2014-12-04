@@ -2,43 +2,42 @@
 <toolbar charset="SHIFTJIS_CHARSET" font="MS UI Gothic:9">
 	<button type="dropdown" resid="LogoBtn" Accesskey="0">
 		<menu resid="info_options">
-		<item resid="WAT-C" image="-1"/>
-		<separator/>
-		<subitem resid="Toolbar_Options">
-			<item resid="ToggleHK" image="-1"/>	
-			<item resid="ToggleHKCaption" image="-1"/>
-			<item resid="ToggleIcon" image="-1"/>
-		</subitem>	
-		<item resid="Help" image="-1"/>
-		<separator/>	
-		<item resid="About" image="-1"/>
-		<separator/>
-		<item resid="Updated" image="-1"/>	
+			<item resid="WAT-C" image="-1"/>
+			<separator/>
+			<subitem resid="Toolbar_Options">
+				<item resid="ToggleHK" image="-1"/>
+				<item resid="ToggleHKCaption" image="-1"/>
+				<item resid="ToggleIcon" image="-1"/>
+			</subitem>
+			<item resid="Help" image="-1"/>
+			<separator/>
+			<item resid="About" image="-1"/>
+			<separator/>
+			<item resid="Updated" image="-1"/>
+			<item resid="Version" image="-1"/>
 		</menu>
 	</button>
 	<btnseparator/>
 	<button type="button" resid="Validate" accesskey="1" image="check.bmp">
 		<menu resid="Validation">
-		<item resid="Validate_API" image="-1" />
-		<separator/>
+			<item resid="Validate_API" image="-1" />
+			<separator/>
 			<item resid="validatorNU" image="-1" />
 			<item resid="validatorNU_m" image="-1" window="new" />
 			<item resid="Validate_HTML_5" image="-1" />
 			<item resid="Validate_HTML_5_m" window="new" image="-1" />
 			<item resid="wcag_filter" image="-1" />
-				<separator/>
-			<subitem resid="W3C_HTML_Validator">	
+			<separator/>
+			<subitem resid="W3C_HTML_Validator">
 				<subitem resid="mainframe_w3c">
 					<item resid="Validate_HTML_M" image="-1" />
 					<item resid="Validate_HTML_New_M" image="-1" window="new" />
 				</subitem>
-				
 				<subitem resid="allframes_w3c">
 					<item resid="Validate_HTML" image="-1" />
 					<item resid="Validate_HTML_New" image="-1" window="new" />
 				</subitem>
 			</subitem>
-				
 			<subitem resid="W3C_CSS">
 				<item resid="Validate_CSS" image="-1"/>
 				<item resid="Validate_CSS_New" image="-1" window="new" />
@@ -50,15 +49,14 @@
 				<item resid="W3C_Link_Linked" image="-1" window="new" />
 			</subitem>
 			<separator/>
-		<item resid="FAE" image="-1" />
-		<separator/>
+			<item resid="FAE" image="-1" />
+			<separator/>
 			<item resid="wave_tool" image="-1" />
-	<separator/>
-	<item resid="jsread_tool" image="-1" />
-	<!-- <item resid="lynx_tool" image="-1" /> -->
-	<separator/>
-	<item resid="tenon_tool" image="-1" />
-	</menu>
+			<separator/>
+			<item resid="jsread_tool" image="-1" />
+			<separator/>
+			<item resid="tenon_tool" image="-1" />
+		</menu>
 	</button>
 	<btnseparator/>
 	<button type="button" resid="CSS" accesskey="2" image="css.bmp">
@@ -67,90 +65,90 @@
 			<item resid="Disable_CSS_inline" image="-1"/>
 			<separator/>
 			<item resid="none_CSS_inline" image="-1"/>
-				<item resid="hidden_CSS_visible" image="-1"/>
-				<item resid="off_CSS_visible" image="-1"/>	
+			<item resid="hidden_CSS_visible" image="-1"/>
+			<item resid="off_CSS_visible" image="-1"/>
 		</menu>
 	</button>
 	<btnseparator/>
 	<button type="button" resid="Images" accesskey="3" image="image.bmp">
-	<menu resid="Images">
-	<item resid="list_img" image="-1" />
-	<item resid="toggle_img" image="-1" />
-	<item resid="toggle_cssimg" image="-1" />
-	<item resid="show_img" image="-1" />
-	<item resid="map_img" image="-1" />
-	<separator/>
-	<item resid="ActiveImage" image="-1"  />
-	<item resid="LargerImage" images="-1" /> 
-	</menu></button>
+		<menu resid="Images">
+			<item resid="list_img" image="-1" />
+			<item resid="toggle_img" image="-1" />
+			<item resid="toggle_cssimg" image="-1" />
+			<item resid="show_img" image="-1" />
+			<item resid="map_img" image="-1" />
+			<separator/>
+			<item resid="ActiveImage" image="-1"  />
+			<item resid="LargerImage" images="-1" />
+		</menu>
+	</button>
 	<btnseparator/>
 	<button type="command" resid="cca_col" accesskey="4" image="colour.bmp">
-	<menu resid="cca_col" /></button>
+		<menu resid="cca_col" />
+	</button>
 	<btnseparator/>
 	<button type="button" resid="Structure" accesskey="5" image="structure.bmp">
-	<menu resid="Structure">
-	<item resid="head1_struc" image="-1" />
-	<item resid="head2_struc" image="-1" />
-  <item resid="Headings" image="-1" /> 
-	<separator/>
-	<item resid="list_struc" image="-1" />
-	<item resid="form_struc" image="-1" />
-	<item resid="abbr_struc" image="-1" />
-	<item resid="q_struc" image="-1" />
-	<item resid="p_struc" image="-1" />
-<item resid="section_struc" image="-1" />
-<item resid="landmark_struc" image="-1" />
-	<separator/>
-	<item resid="access_struc" image="-1" />
-	<item resid="tab_order" image="-1" />
-	<separator/>
-	<item resid="other_struc" image="-1" />
-	<!-- <item resid="other_struc_1" image="-1" /> -->
-	<item resid="other_aria" image="-1" /> 
-	<item resid="show_focus" image="-1" />
-	</menu>
+		<menu resid="Structure">
+			<item resid="head1_struc" image="-1" />
+			<item resid="head2_struc" image="-1" />
+			<item resid="Headings" image="-1" />
+			<separator/>
+			<item resid="list_struc" image="-1" />
+			<item resid="form_struc" image="-1" />
+			<item resid="abbr_struc" image="-1" />
+			<item resid="q_struc" image="-1" />
+			<item resid="p_struc" image="-1" />
+			<item resid="section_struc" image="-1" />
+			<item resid="landmark_struc" image="-1" />
+			<separator/>
+			<item resid="access_struc" image="-1" />
+			<item resid="tab_order" image="-1" />
+			<separator/>
+			<item resid="other_struc" image="-1" />
+			<item resid="other_aria" image="-1" />
+			<item resid="show_focus" image="-1" />
+		</menu>
 	</button>
 	<btnseparator/>
-	<button type="button" resid="tables" accesskey="6" image="table.bmp"><menu resid="tables">
-	<item resid="used_col" image="-1" />
-	<item resid="th_struc" image="-1" />
-	<item resid="complex_struc" image="-1" />
-	<item resid="border_struc" image="-1" />
-	<item resid="cell_struc" image="-1" />
-	 <item resid="DataTable" image="-1" /> 
-	<item resid="linear_struc" image="-1" />
-	</menu></button>
+	<button type="button" resid="tables" accesskey="6" image="table.bmp">
+		<menu resid="tables">
+			<item resid="used_col" image="-1" />
+			<item resid="th_struc" image="-1" />
+			<item resid="complex_struc" image="-1" />
+			<item resid="border_struc" image="-1" />
+			<item resid="cell_struc" image="-1" />
+			<item resid="DataTable" image="-1" />
+			<item resid="linear_struc" image="-1" />
+		</menu>
+	</button>
 	<btnseparator/>
 	<button type="button" resid="framemenu" accesskey="7" image="frame.bmp">
-	<menu resid="framemenu">
-	<item resid="indivframes" />
-	<separator/>
-	<item resid="fborder_struc" image="-1" />
-	<item resid="frame_struc" image="-1" />
-	</menu>
+		<menu resid="framemenu">
+			<item resid="indivframes" />
+			<separator/>
+			<item resid="fborder_struc" image="-1" />
+			<item resid="frame_struc" image="-1" />
+		</menu>
 	</button>
-	
 	<btnseparator/>
 	<button type="button" resid="doc_info" accesskey="c" image="i.bmp">
-	<menu resid="doc_info">
-	
-	<item resid="page_info" image="-1" />
-	<item resid="meta_info" image="-1" />
-<separator/>
-	<item resid="lang_info" image="-1" />
-	<item resid="title_info" image="-1" />
-	<separator/>
-	<item resid="SkipLink" image="-1" /> 
-	<item resid="listlink_info" image="-1" />
-	<item resid="nw_struc" image="-1" />
-	<item resid="file_info" image="-1" />
-	<separator/>
-	<item resid="partial_source" image="-1" />
-	<item resid="DOM_viewer" image="-1" />
-	</menu></button>
+		<menu resid="doc_info">
+			<item resid="page_info" image="-1" />
+			<item resid="meta_info" image="-1" />
+			<separator/>
+			<item resid="lang_info" image="-1" />
+			<item resid="title_info" image="-1" />
+			<separator/>
+			<item resid="SkipLink" image="-1" />
+			<item resid="listlink_info" image="-1" />
+			<item resid="nw_struc" image="-1" />
+			<item resid="file_info" image="-1" />
+			<separator/>
+			<item resid="partial_source" image="-1" />
+			<item resid="DOM_viewer" image="-1" />
+		</menu>
+	</button>
 	<btnseparator/>
-	
-	
 	<button type="dropdown" resid="IE_Options" image="ie.bmp" accesskey="s">
 		<menu resid="IE_Options">
 			<item resid="toggleimg" image="-1" accesskey="I" />
@@ -166,68 +164,65 @@
 				<item resid="Smallest" image="-1" accesskey="x" />
 			</subitem>
 			<separator/>
-	<item resid="InetCPL" images="-1" /> 
-  <item resid="AccessDlg" image="-1" /> 
-  <item resid="AccessCpl" image="-1" /> 
+			<item resid="InetCPL" images="-1" />
+			<item resid="AccessDlg" image="-1" />
+			<item resid="AccessCpl" image="-1" />
 		</menu>
 	</button>
 	<btnseparator/>
 	<button type="command" resid="IEdev" image="ie.bmp">
-	<menu resid="IEdev" /></button>
+		<menu resid="IEdev" />
+	</button>
 	<btnseparator/>
 	<button type="command" resid="msaav" image="tools.bmp" accesskey="a">
-	<menu resid="msaav" /></button>
+		<menu resid="msaav" />
+	</button>
 	<btnseparator/>
 	<button type="button" resid="refs" Accesskey="8" image="logger.bmp">
-	<menu resid="refs">
+		<menu resid="refs">
 			<subitem resid="guid">
-			<item resid="html5" image="-1"/>
-			<item resid="html5authoredition" image="-1"/>
-			<item resid="htmlmarkup" image="-1"/>
-			<separator/>
-			<item resid="html5alt" image="-1"/>
-			<item resid="htmlimp" image="-1"/>
+				<item resid="html5" image="-1"/>
+				<item resid="html5authoredition" image="-1"/>
+				<item resid="htmlmarkup" image="-1"/>
 				<separator/>
-			<item resid="wcag2" image="-1"/>
-			<item resid="wcag2quick" image="-1"/>
-			<item resid="wcag2understand" image="-1"/>
-			<item resid="techall" image="-1"/>	
+				<item resid="html5alt" image="-1"/>
+				<item resid="htmlimp" image="-1"/>
+				<separator/>
+				<item resid="wcag2" image="-1"/>
+				<item resid="wcag2quick" image="-1"/>
+				<item resid="wcag2understand" image="-1"/>
+				<item resid="techall" image="-1"/>
 				<separator/>
 				<item resid="ariaroles" image="-1"/>
-			<item resid="ariasp" image="-1"/>
-			<item resid="ariarm" image="-1"/>
-			<separator/>
-			<item resid="atag1" image="-1"/>
-			<item resid="atag2" image="-1"/>
-			<separator/>
-			<item resid="uaag1" image="-1"/>
-			
-			<separator/>
-			<item resid="sec5083" image="-1"/>
-			<item resid="sec5081" image="-1"/>
-			<item resid="sec5081guide" image="-1"/>
-			<item resid="sec5082" image="-1"/>
-			<item resid="sec508guide" image="-1"/>
-			
-		</subitem>	
+				<item resid="ariasp" image="-1"/>
+				<item resid="ariarm" image="-1"/>
+				<separator/>
+				<item resid="atag1" image="-1"/>
+				<item resid="atag2" image="-1"/>
+				<separator/>
+				<item resid="uaag1" image="-1"/>
+				<separator/>
+				<item resid="sec5083" image="-1"/>
+				<item resid="sec5081" image="-1"/>
+				<item resid="sec5081guide" image="-1"/>
+				<item resid="sec5082" image="-1"/>
+				<item resid="sec508guide" image="-1"/>
+			</subitem>
 			<subitem resid="references">
-			<item resid="html5acc" image="-1"/>
-			<item resid="webaim" image="-1"/>	
-			<item resid="jt" image="-1"/>
-		</subitem>	
-		<subitem resid="blogs">
-			<item resid="tpg" image="-1"/>
-			<item resid="js" image="-1"/>	
-		</subitem>	
-			
-				</menu>
-			</button>
-			<btnseparator/>
-
+				<item resid="html5acc" image="-1"/>
+				<item resid="webaim" image="-1"/>
+				<item resid="jt" image="-1"/>
+			</subitem>
+			<subitem resid="blogs">
+				<item resid="tpg" image="-1"/>
+				<item resid="js" image="-1"/>
+			</subitem>
+		</menu>
+	</button>
+	<btnseparator/>
 	<button type="button" resid="oopera" image="firefox1.bmp" accesskey="o">
-	<menu resid="openbrowsers">
-	<item resid="openbrowsers" image="-1"/>
-</menu>	
-			</button>
-	
+		<menu resid="openbrowsers">
+			<item resid="openbrowsers" image="-1"/>
+		</menu>
+	</button>
 </toolbar>
