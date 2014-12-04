@@ -8,12 +8,12 @@
 ; Please *do not* save changes if you only edit the above two lines :-).
 
 ; Vital Stats
+#define ReleaseYear 2014
 #define TPG "The Paciello Group"
 #define AppNameFull "Web Accessibility Toolbar"
 #define AppNameShort "WAT"
 #define FirstYear 2004
-#define ReleaseYear 2014
-#define TheVersion "2.0.0.0"
+#define TheVersion ReadIni(SourcePath + "\wat\Translation.ini", "Captions", "Version", ">>>UNKOWN<<<")
 #define DestinationDirectory "Web-Accessibility-Toolbar"
 
 ; Output filename arch part
@@ -32,7 +32,7 @@ uninstallfilesdir={app}
 UninstallDisplayName={#AppNameFull} (Uninstall only)
 sourcedir=wat
 OutputDir=..
-outputbasefilename=WAT-{#ReleaseYear}-{#OutputArchName}
+outputbasefilename=WAT-{#TheVersion}-{#OutputArchName}
 defaultdirname={pf}\{#DestinationDirectory}
 appvername={#AppNameFull}
 Appname={#AppNameFull}
@@ -42,7 +42,6 @@ DisableFinishedPage=no
 DisableProgramGroupPage=yes
 VersionInfoCompany={#TPG}
 VersionInfoCopyright=Copyright (C) {#FirstYear}-{#ReleaseYear} {#TPG}
-VersionInfoVersion={#TheVersion}
 VersionInfoDescription={#AppNameFull} {#ReleaseYear}
 AppPublisher={#TPG}
 AppPublisherURL=http://www.paciellogroup.com
