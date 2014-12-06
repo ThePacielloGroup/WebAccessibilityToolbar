@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <toolbar charset="SHIFTJIS_CHARSET" font="MS UI Gothic:9">
-	<button type="dropdown" resid="LogoBtn" Accesskey="0">
+	<button type="button" resid="LogoBtn" Accesskey="0">
 		<menu resid="info_options">
 			<item resid="WAT-C" image="-1"/>
 			<separator/>
@@ -25,7 +25,7 @@
 			<item resid="validatorNU" image="-1" />
 			<item resid="validatorNU_m" image="-1" window="new" />
 			<item resid="Validate_HTML_5" image="-1" />
-			<item resid="Validate_HTML_5_m" window="new" image="-1" />
+			<item resid="Validate_HTML_5_m" image="-1" window="new" />
 			<item resid="wcag_filter" image="-1" />
 			<separator/>
 			<subitem resid="W3C_HTML_Validator">
@@ -149,7 +149,7 @@
 		</menu>
 	</button>
 	<btnseparator/>
-	<button type="dropdown" resid="IE_Options" image="ie.bmp" accesskey="s">
+	<button type="button" resid="IE_Options" image="ie.bmp" accesskey="s">
 		<menu resid="IE_Options">
 			<item resid="toggleimg" image="-1" accesskey="I" />
 			<item resid="ToggleJS" image="-1" accesskey="J" />
