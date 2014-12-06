@@ -1,1 +1,0 @@
-WATReg.exe /i
