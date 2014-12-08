@@ -457,3 +457,4 @@ The following is a complete list of WAT keyboard shortcuts:
 -   References menu - Control Alt l.
 -   aViewer menu - Control Alt a.
 -   Help menu - Control Alt 0.
+
