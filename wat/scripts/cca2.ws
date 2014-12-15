@@ -345,9 +345,9 @@ function getBrightness(objForeColour, objBackColour)
 	var strBrightResult;
 
 	if (iBackgroundBrightness > iForegroundBrightness)
-		iBrightDifference = parseInt(iBackgroundBrightness - iForegroundBrightness);
+		iBrightDifference = parseInt(iBackgroundBrightness - iForegroundBrightness, 10);
 	else
-		iBrightDifference = parseInt(iForegroundBrightness - iBackgroundBrightness);
+		iBrightDifference = parseInt(iForegroundBrightness - iBackgroundBrightness, 10);
 
 	
 	
@@ -369,17 +369,17 @@ function calculateLuminosity(fRed, fGreen, fBlue, fFullScale)
 	var fBlueRGB = fBlue / fFullScale;
 	var fLinearisedRed, fLinearisedGreen, fLinearisedBlue;
 
-	if (fRedRGB <= 0.3928)
+	if (fRedRGB <= 0.03928)
 		fLinearisedRed = fRedRGB / 12.92;
 	else
 		fLinearisedRed = Math.pow(((fRedRGB + 0.055)/1.055), 2.4);
 
-	if (fGreenRGB <= 0.3928)
+	if (fGreenRGB <= 0.03928)
 		fLinearisedGreen = fGreenRGB / 12.92;
 	else
 		fLinearisedGreen = Math.pow(((fGreenRGB + 0.055)/1.055), 2.4);
 
-	if (fBlueRGB <= 0.3928)
+	if (fBlueRGB <= 0.03928)
 		fLinearisedBlue = fBlueRGB / 12.92;
 	else
 		fLinearisedBlue = Math.pow(((fBlueRGB + 0.055)/1.055), 2.4);
@@ -436,14 +436,14 @@ function getLuminosity(objForeColour, objBackColour)
 
 
 // Calculate luminosity
-function calculateLuminosity(fRed, fGreen, fBlue, fFullScale)
-{
-	fLinearisedRed = Math.pow((fRed / fFullScale), 2.4);
-	fLinearisedGreen = Math.pow((fGreen / fFullScale), 2.4);
-	fLinearisedBlue = Math.pow((fBlue / fFullScale), 2.4);
+////function calculateLuminosity(fRed, fGreen, fBlue, fFullScale)
+////{
+////	fLinearisedRed = Math.pow((fRed / fFullScale), 2.4);
+////	fLinearisedGreen = Math.pow((fGreen / fFullScale), 2.4);
+////	fLinearisedBlue = Math.pow((fBlue / fFullScale), 2.4);
 
-	return (0.2126 * fLinearisedRed + 0.7152 * fLinearisedGreen + 0.0722 * fLinearisedBlue);
-}
+////	return (0.2126 * fLinearisedRed + 0.7152 * fLinearisedGreen + 0.0722 * fLinearisedBlue);
+////}
 
 // Get an array of the parent elements
 function getParentElements(objElement)
