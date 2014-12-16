@@ -93,7 +93,8 @@ Development Info
 Please use tabs for indentation (we recommend a tabstop of four).
 
 Before committing, please remember to build and test, and consider
-incrementing the version number (currently this is the date).
+incrementing the version number (it's in `wat/Translation.ini` under the
+"Version" key and currently it is the release date, but it needn't be).
 
 The file `wat/Translation.ini` is in UTF-16, which Git can't cope with.
 However, you can use an external diff tool, such as vimdiff (or mvimdiff
