@@ -64,15 +64,37 @@ Accessibility\_Toolbar.xml)
 Building
 --------
 
-Open `Web-Accessibility-Toolbar.iss` with [Inno
-Setup](http://www.jrsoftware.org/isinfo.php). You can build a setup file
-for 32-bit machines, or one for 64-bit machines (which also includes the
-32-bit binaries, so you can use IE in 32- or 64-bit mode). The comments
-in the ISS file explain how (you only need to change one line of the
-file).
+You must have [Inno Setup](http://www.jrsoftware.org/isinfo.php)
+installed to build a `setup.exe`-style installer.
+
+You can build an installer for 32-bit machines, or one for 64-bit
+machines (which also includes the 32-bit binaries, so you can use IE in
+32- or 64-bit mode). There are two ways to do this.
+
+-   **Easy:** Double-click on `build32.bat` or `build64.bat`. This will
+    open a command prompt window in which the installer build progress
+    will be displayed. When the build is complete, you can press any key
+    to close the window.
+
+    Note for network folder users: Windows doesn't get on well with
+    invoking batch files from network folders (as cmd.exe doesn't
+    support UNC paths, even if you've mapped the share to a drive
+    letter...), though if you [open a command prompt window in the
+    folder](http://stackoverflow.com/a/379804) and type the name of the
+    batch file, that will work.
+
+-   **1337:** Open `Web-Accessibility-Toolbar.iss`; the comments in the
+    file explain how to make a build (you only need to change one line
+    of the file).
 
 Development Info
 ----------------
+
+Please use tabs for indentation (we recommend a tabstop of four).
+
+Before committing, please remember to build and test, and consider
+incrementing the version number (it's in `wat/Translation.ini` under the
+"Version" key and currently it is the release date, but it needn't be).
 
 The file `wat/Translation.ini` is in UTF-16, which Git can't cope with.
 However, you can use an external diff tool, such as vimdiff (or mvimdiff
