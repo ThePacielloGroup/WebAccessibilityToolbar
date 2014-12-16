@@ -34,6 +34,11 @@ The W3C Nu validation service provides a detailed report on the HTML and
 ARIA code of the web page, including errors and warnings. There are
 options to open the report in the current window or a new window.
 
+
+### W3C Nu validation service (as HTML5)
+
+The W3C Nu validation service provides a detailed report on the HTML and ARIA code of the web page, including errors and warnings. There are options to open the report in the current window or a new window.
+
 ### Filter Nu results
 
 The Nu filter can be used on the results produced by the W3C Nu
@@ -81,10 +86,15 @@ Flesch-Kincaid grade level. It provides a report that indicates the
 average reading age or education level required to read and understand
 the content of the page.
 
+### Tenon
+
+**NEW:**  Tenon can be used to test the accessibility of your code 'during' development, rather than after the fact.  Tenon also provides a report on the accessibility of the current page.  Feedback welcome...
+
+
 CSS menu
 --------
 
-Keyboard shortcut: Control 3.
+Keyboard shortcut: Control 2.
 
 The options under this menu can be used to manipulate the CSS used to
 style the current web page.
@@ -119,7 +129,7 @@ off-screen, bringing the content into the browser's viewport.
 Images menu
 -----------
 
-Keyboard shortcut: Control 4.
+Keyboard shortcut: Control 3.
 
 The options under this menu can be used to manipulate the images and
 graphical content of the current page.
@@ -168,10 +178,10 @@ Counts alt-text errors and highlights alt-text on larger images to
 review. Larger images are \<img\> elements which are not active and
 whose height and width are *both*greater than 9 pixels.
 
-Colour button
+Colour menu
 -------------
 
-Keyboard shortcut: Control 5.
+Keyboard shortcut: Control 4.
 
 ### Contrast analyzer application
 
@@ -179,10 +189,15 @@ The Contrast analyzer checks the contrast of foreground/background
 colour combinations against WCAG 2.0 SC1.4.3. Enter the hex codes for
 the foreground/background colours to determine their contrast ratio.
 
+
+### Juicy Studio luminosity tester
+
+The luminosity tester will provide information regarding the foreground/background colour combinations for the entire page, in a nice table format output. 
+
 Structure menu
 --------------
 
-Keyboard shortcut: Control 6.
+Keyboard shortcut: Control 5.
 
 The options under this menu can be used to evaluate different aspects of
 the HTML structure of the current page.
@@ -229,8 +244,12 @@ This displays \<q\> and \<blockquote\> markup inline within the page.
 
 This displays instances of the \<p\> element inline within the page.
 
+
+### Section elements
+
 This displays HTML5 sectioning element markup inline within the page,
 for example the \<header\>, \<footer\> and \<article\> elements.
+
 
 ### ARIA landmark roles
 
@@ -253,10 +272,20 @@ the sequence of focusable elements across the page.
 Enter an element, then select a colour. All instances of the chosen
 element will be highlighted on the page in the chosen colour.
 
+### Show elements with ARIA attributes
+
+**NEW** This function will pop up a new window providing information about the use of ARIA on the page. Viewing the source code for this output window may be more beneficial.  Feedback welcome...
+
+
+### Visually show focus
+
+ **NEW**  Adds some visual enhancement to the keyboard focus, when tabbing about a page.  Need to apply on a page by page basis, to remove just refresh the page. Feedback welcome...
+ 
+
 Tables menu
 -----------
 
-Keyboard shortcut: Control 7.
+Keyboard shortcut: Control 6.
 
 The options under this menu can be used to examine HTML tables on the
 current page.
@@ -269,7 +298,11 @@ displays inline information about their markup and construction.
 ### Table headers
 
 This indicates the presence of table headers and displays inline
-information for each \<th\> element found.
+information for each <th\> element found.
+
+### Show data tables
+
+Show data table function provides markup on the page for any data tables found.
 
 ### Table borders
 
@@ -280,10 +313,9 @@ Adds a CSS border style to all table elements on the page.
 This displays a number inline within each table cell, making it easy to
 understand the order of content within a table.
 
-### Data tables
+### Data table count
 
-This counts the number of data tables present on the page and presents
-the result in an alert dialogue.
+This counts the number of data tables present on the page and presents the result in an alert dialogue.
 
 ### Linearize
 
@@ -294,7 +326,7 @@ reader).
 Frames menu
 -----------
 
-Keyboard shortcut: Control 8.
+Keyboard shortcut: Control 7.
 
 The options under this menu can be used to check frames used within the
 current page.
@@ -442,19 +474,17 @@ settings for the WAT:
 Keyboard shortcuts
 ------------------
 
-The following is a complete list of WAT keyboard shortcuts:
+The following is a list of WAT keyboard shortcuts:
 
--   Check menu - Control 1.
--   Resize menu - Control 2.
--   CSS menu - Control 3.
--   Images menu - Control 4.
--   Colour menu - Control 5.
--   Structure menu - Control 6.
--   Tables menu - Control 7.
--   Frames menu - Control 8.
+-   Check menu - Control Alt 1.
+-   CSS menu - Control Alt 2.
+-   Images menu - Control Alt 3.
+-   Colour menu - Control Alt 4.
+-   Structure menu - Control Alt 5.
+-   Tables menu - Control Alt 6.
+-   Frames menu - Control Alt 7.
 -   Document info - Control Alt c.
 -   IE menu - Control Alt s.
--   References menu - Control Alt l.
--   aViewer menu - Control Alt a.
+-   References menu - Control Alt 8.
 -   Help menu - Control Alt 0.
 
