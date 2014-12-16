@@ -1,3 +1,3 @@
 call _build.bat
-%ISCC% /dBuild32BitOnly Web-Accessibility-Toolbar.iss
+%ISCC% /dBUILD_MODE=32 Web-Accessibility-Toolbar.iss
 pause

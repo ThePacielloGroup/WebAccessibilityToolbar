@@ -4,8 +4,8 @@
 ;  * A 32-bit (only) build contains only 32-bit binaries
 ;  * A 32-and-64-bit build contains 32-bit and 64-bit binaries (so you can run WAT in IE in both 32- and 64-bit modes)
 ; You can build both types of installer regardless of your Windows architecture.
-;#define Build32BitOnly
-;#define Build32And64Bit
+;#define BUILD_MODE "32"
+;#define BUILD_MODE "64"
 ; Please *do not* save changes if you only edit the above two lines :-).
 
 ; Vital Stats
@@ -17,14 +17,20 @@
 #define TheVersion ReadIni(SourcePath + "\wat\Translation.ini", "Captions", "Version", ">>>UNKOWN<<<")
 #define DestinationDirectory "Web-Accessibility-Toolbar"
 
+; Ensure that a build type was defined
+#ifndef BUILD_MODE
+  #pragma error "No build mode defined: either use the batch files to build the installer(s), or consult the comments at the start of the ISS file for more information"
+#endif
+
 ; Output filename arch part
-#ifdef Build32BitOnly
+#if BUILD_MODE == "32"
   #define OutputArchName "32"
   #define InstallArch ""
-#endif
-#ifdef Build32And64Bit
+#elif BUILD_MODE == "64"
   #define OutputArchName "32+64"
   #define InstallArch "x64"
+#else
+  #pragma error "Invalid build mode '" + BUILD_MODE + "' requested (should be '32' or '64')"
 #endif
 
 [Setup]
@@ -63,7 +69,7 @@ Source: "Accessibility_Toolbar.dll"; DestDir: "{pf32}\{#DestinationDirectory}"; 
 Source: "scripts/*.*"; DestDir: "{pf32}\{#DestinationDirectory}\scripts"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec;
 Source: "aViewer/*.*"; DestDir: "{pf32}\{#DestinationDirectory}\aViewer"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec;
 Source: "CCA/*.*"; DestDir: "{pf32}\{#DestinationDirectory}\CCA"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec;
-#ifdef Build32And64Bit
+#if BUILD_MODE == "64"
 Source: "icons/*.bmp"; DestDir: "{pf64}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
 Source: "Accessibility_Toolbar.xml"; DestDir: "{pf64}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
 Source: "translation.ini"; DestDir: "{pf64}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
@@ -79,14 +85,14 @@ Name: "en"; MessagesFile: "compiler:Default.isl"
 [UninstallDelete]
 Type: files; Name: "{pf32}\{#DestinationDirectory}\*.*";
 Type: filesandordirs; Name: "{pf32}\{#DestinationDirectory}";
-#ifdef Build32And64Bit
+#if BUILD_MODE == "64"
 Type: files; Name: "{pf64}\{#DestinationDirectory}\*.*"; Check: Is64BitInstallMode
 Type: filesandordirs; Name: "{pf64}\{#DestinationDirectory}"; Check: Is64BitInstallMode
 #endif
 
 [Dirs]
 Name: "{pf32}\{#DestinationDirectory}"; Permissions: users-readexec;
-#ifdef Build32And64Bit
+#if BUILD_MODE == "64"
 Name: "{pf64}\{#DestinationDirectory}"; Permissions: users-readexec; Check: Is64BitInstallMode
 #endif
 
