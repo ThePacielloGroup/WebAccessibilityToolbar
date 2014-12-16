@@ -177,7 +177,7 @@
 		<menu resid="IEdev" />
 	</button>
 	<btnseparator/>
-	<button type="command" resid="msaav" image="tools.bmp" accesskey="a">
+	<button type="command" resid="msaav" image="tools.bmp" >
 		<menu resid="msaav" />
 	</button>
 	<btnseparator/>
