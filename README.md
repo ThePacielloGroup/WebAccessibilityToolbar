@@ -77,11 +77,11 @@ machines (which also includes the 32-bit binaries, so you can use IE in
     to close the window.
 
     Note for network folder users: Windows doesn't get on well with
-    invoking batch files from network folders (as cmd.exe doesn't
-    support UNC paths, even if you've mapped the share to a drive
-    letter...), though if you [open a command prompt window in the
+    launching batch files from network folders (as cmd.exe doesn't
+    support UNC paths), so you can either explore the folder via a
+    mapped drive, or [open a command prompt window in the network
     folder](http://stackoverflow.com/a/379804) and type the name of the
-    batch file, that will work.
+    batch file.
 
 -   **1337:** Open `Web-Accessibility-Toolbar.iss`; the comments in the
     file explain how to make a build (you only need to change one line
