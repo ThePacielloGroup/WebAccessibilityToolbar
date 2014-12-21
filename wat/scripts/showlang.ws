@@ -51,8 +51,11 @@ function main()
                 {
                     if (f_length>1)
                     {
-                        outitem = localize('doclang1')+'\n'+GetFrame(fr).document.location+'\n';
-                    }
+					//	if (fr == 1)
+							outitem = localize('frame3') + " - " + localize('doclang1')+'\n'+GetFrame(fr).document.location+'\n';
+					//	else
+					//		outitem = localize('doclang1')+'\n'+GetFrame(fr).document.location+'\n';
+					}
                     else
                     {
                         outitem = localize('doclang1');
