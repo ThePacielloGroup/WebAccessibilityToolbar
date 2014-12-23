@@ -24,8 +24,6 @@
 			<separator/>
 			<item resid="validatorNU" image="-1" />
 			<item resid="validatorNU_m" image="-1" window="new" />
-			<item resid="Validate_HTML_5" image="-1" />
-			<item resid="Validate_HTML_5_m" image="-1" window="new" />
 			<item resid="wcag_filter" image="-1" />
 			<separator/>
 			<subitem resid="W3C_HTML_Validator">

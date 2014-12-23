@@ -28,22 +28,16 @@ in the HTML code of the web page. It is a high level indication of the
 code quality, and does not provide any details about the nature of the
 errors.
 
-### W3C Nu validation service
+### W3C Nu Markup Checker
 
-The W3C Nu validation service provides a detailed report on the HTML and
-ARIA code of the web page, including errors and warnings. There are
-options to open the report in the current window or a new window.
-
-### W3C Nu validation service (as HTML5)
-
-The W3C Nu validation service provides a detailed report on the HTML and
+The W3C Nu Markup Checker provides a detailed report on the HTML and
 ARIA code of the web page, including errors and warnings. There are
 options to open the report in the current window or a new window.
 
 ### Filter Nu results
 
 The Nu filter can be used on the results produced by the W3C Nu
-validation service. It filters the results so that only conformance
+Markup Checker. It filters the results so that only conformance
 issues relating to accessibility are displayed.
 
 ### W3C HTML validation service
@@ -163,7 +157,7 @@ image.
 
 Checks for the presence of client-side and server-side image maps. if
 none are found it is indicated by an alert message. If image maps are
-found, they are displayed in a new window along withthe associated area
+found, they are displayed in a new window along with the associated area
 elements
 
 ### Active images
@@ -401,7 +395,7 @@ leading to downloadable files on the current page.
 
 ### View partial source
 
-Displays the DOM tree of the selected content as HTML. Select aome page
+Displays the DOM tree of the selected content as HTML. Select some page
 content then activate the function. A new window will open showing the
 selected content and generated code.
 
