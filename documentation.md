@@ -13,6 +13,10 @@ keyboard shortcut. These shortcuts are included throughout, and
 summarised in the [keyboard shortcuts](#keyboard-shortcuts) section for
 convenience.
 
+**Note:** You will need to disable IE's pop-up blocker (via Internet
+Options \> Privacy \> Pop-up Blocker) in order for some of the WAT's
+features to work, as they open a new tab to display their results.
+
 Check menu
 ----------
 
@@ -36,9 +40,9 @@ options to open the report in the current window or a new window.
 
 ### Filter Nu results
 
-The Nu filter can be used on the results produced by the W3C Nu
-Markup Checker. It filters the results so that only conformance
-issues relating to accessibility are displayed.
+The Nu filter can be used on the results produced by the W3C Nu Markup
+Checker. It filters the results so that only conformance issues relating
+to accessibility are displayed.
 
 ### W3C HTML validation service
 
