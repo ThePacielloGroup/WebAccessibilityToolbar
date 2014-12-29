@@ -1,11 +1,49 @@
-﻿function main()
+﻿// borrowed getSelectionHtml() from web @ http://stackoverflow.com/questions/5222814/window-getselection-return-html
+function getSelectionHtml() {
+    var html = "";
+    if (typeof window.getSelection != "undefined") {
+        var sel = window.getSelection();
+        if (sel.rangeCount) {
+            var container = document.createElement("div");
+            for (var i = 0, len = sel.rangeCount; i < len; ++i) {
+                container.appendChild(sel.getRangeAt(i).cloneContents());
+            }
+            html = container.innerHTML;
+        }
+    } else if (typeof document.selection != "undefined") {
+        if (document.selection.type == "Text") {
+            html = document.selection.createRange().htmlText;
+        }
+    }
+    return html;
+}
+
+function main()
 { 
 	try
 	{
-		q=(f_length?'':document.selection.createRange().htmlText);
+		if (window.getSelection())
+			q=(f_length?'':getSelectionHtml());    // could just do same thing as below with the GetFrames, instead of calling the function
+		else
+			q=(f_length?'':document.selection.createRange().htmlText);
+			
 		for(i=0;i<f_length;i++)
 		{
-			q=GetFrame(i).document.selection.createRange().htmlText;
+			if (window.getSelection())
+				{
+				var a = GetFrame(i).getSelection();
+				if (a.rangeCount) 
+					{
+						var container = document.createElement("div");
+						for (var i = 0, len = a.rangeCount; i < len; ++i) 
+						{
+							container.appendChild(a.getRangeAt(i).cloneContents());
+						}
+					q = container.innerHTML;
+					}
+				}
+			else
+				q=GetFrame(i).document.selection.createRange().htmlText;
 			//alert(q);
 			if(q!='')break;
 		}
