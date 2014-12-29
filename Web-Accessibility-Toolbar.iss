@@ -122,3 +122,41 @@ begin
           vIE.Navigate('http://www.paciellogroup.com/resources/wat');
      end;
 end;
+
+// Check for running processes
+// http://stackoverflow.com/a/9950718
+function IsAppRunning(const FileName : string): Boolean;
+var
+    FSWbemLocator: Variant;
+    FWMIService   : Variant;
+    FWbemObjectSet: Variant;
+begin
+    Result := false;
+    FSWbemLocator := CreateOleObject('WBEMScripting.SWBEMLocator');
+    FWMIService := FSWbemLocator.ConnectServer('', 'root\CIMV2', '', '');
+    FWbemObjectSet := FWMIService.ExecQuery(Format('SELECT Name FROM Win32_Process Where Name="%s"',[FileName]));
+    Result := (FWbemObjectSet.Count > 0);
+    FWbemObjectSet := Unassigned;
+    FWMIService := Unassigned;
+    FSWbemLocator := Unassigned;
+end;
+
+function CheckForIERunning(situation: String): Boolean;
+begin
+  Result := True;
+  if IsAppRunning('iexplore.exe') then
+  begin
+    Result := False;
+    MsgBox('It seems that IE is running; please close IE and re-run ' + situation + '.', mbCriticalError, MB_OK);
+  end;
+end;
+
+function InitializeSetup(): Boolean;
+begin
+  Result := CheckForIERunning('WAT setup');
+end;
+
+function InitializeUninstall(): Boolean;
+begin
+  Result := CheckForIERunning('the uninstaller');
+end;
