@@ -417,6 +417,7 @@ settings, including:
 -   Toggle ActiveX on/off.
 -   Toggle CSS on/off.
 -   Text resize (Largest, Large, Medium, Small, Smallest).
+-   Open IE options dialog.
 -   Open IE accessibility options dialog.
 -   Windows accessibility options center.
 
