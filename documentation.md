@@ -36,7 +36,8 @@ errors.
 
 The W3C Nu Markup Checker provides a detailed report on the HTML and
 ARIA code of the web page, including errors and warnings. There are
-options to open the report in the current window or a new window.
+options to check all frames, or just the main page. Results open in new
+window(s).
 
 ### Filter Nu results
 
@@ -87,9 +88,9 @@ the content of the page.
 
 ### Tenon
 
-**NEW:** Tenon can be used to test the accessibility of your code
-'during' development, rather than after the fact. Tenon also provides a
-report on the accessibility of the current page. Feedback welcome...
+Tenon can be used to test the accessibility of your code 'during'
+development, rather than after the fact. Tenon also provides a report on
+the accessibility of the current page. Feedback welcome...
 
 CSS menu
 --------

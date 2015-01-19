@@ -22,7 +22,7 @@
 		<menu resid="Validation">
 			<item resid="Validate_API" image="-1" />
 			<separator/>
-			<item resid="validatorNU" image="-1" />
+			<item resid="validatorNU" image="-1" window="new" />
 			<item resid="validatorNU_m" image="-1" window="new" />
 			<item resid="wcag_filter" image="-1" />
 			<separator/>
