@@ -65,6 +65,7 @@ ArchitecturesInstallIn64BitMode={#InstallArch}
 Source: "icons/*.bmp"; DestDir: "{pf32}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec;
 Source: "Accessibility_Toolbar.xml"; DestDir: "{pf32}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec;
 Source: "translation.ini"; DestDir: "{pf32}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec;
+Source: "WAT_IEset.exe"; DestDir: "{pf32}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec;
 Source: "Accessibility_Toolbar.dll"; DestDir: "{pf32}\{#DestinationDirectory}"; Flags: regserver ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec;
 Source: "scripts/*.*"; DestDir: "{pf32}\{#DestinationDirectory}\scripts"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec;
 Source: "aViewer/*.*"; DestDir: "{pf32}\{#DestinationDirectory}\aViewer"; Flags: recursesubdirs ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec;
@@ -73,6 +74,7 @@ Source: "CCA/*.*"; DestDir: "{pf32}\{#DestinationDirectory}\CCA"; Flags: recurse
 Source: "icons/*.bmp"; DestDir: "{pf64}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
 Source: "Accessibility_Toolbar.xml"; DestDir: "{pf64}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
 Source: "translation.ini"; DestDir: "{pf64}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
+Source: "./x64/WAT_IEset.exe"; DestDir: "{pf64}\{#DestinationDirectory}"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
 Source: "./x64/Accessibility_Toolbar.dll"; DestDir: "{pf64}\{#DestinationDirectory}"; Flags: regserver ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
 Source: "scripts/*.*"; DestDir: "{pf64}\{#DestinationDirectory}\scripts"; Flags: ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
 Source: "aViewer/*.*"; DestDir: "{pf64}\{#DestinationDirectory}\aViewer"; Flags: recursesubdirs ignoreversion; MinVersion: 6.0.6002; Permissions:users-readexec; Check: Is64BitInstallMode
