@@ -112,3 +112,5 @@ if you have MacVim).
 The use of `--global` changes the setting in your home directory, rather
 than just the current repository; if you only want to change this
 setting for the WAT repository, drop the `--global` part.
+
+> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
