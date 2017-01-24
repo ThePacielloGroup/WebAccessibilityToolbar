@@ -1,3 +1,5 @@
+*(This tool is no longer in active development)*
+
 Web Accessibility Toolbar
 =========================
 
